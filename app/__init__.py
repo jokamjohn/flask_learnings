@@ -1,5 +1,6 @@
 from flask import Flask
-from app.pages_blue_print import pages
+
+from app.blueprints.pages import pages
 
 # Initialize the application
 app = Flask(__name__)

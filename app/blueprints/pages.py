@@ -18,3 +18,13 @@ def show(page):
         return render_template('pages/%s.html' % page)
     except TemplateNotFound:
         abort(404)
+
+
+@pages.errorhandler(404)
+def page_not_found(e):
+    """
+    Show this page for any 404 error.
+    :param e:
+    :return:
+    """
+    return render_template('pages/404.html')
