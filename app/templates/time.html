@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date-Time</title>
+</head>
+<body>
+
+<h1>Date and Time with Moment.Js</h1>
+
+<p>The date is <strong>{{ moment(current_time).format('LLL') }}</strong></p>
+
+<p>It has been <strong>{{ moment(current_time).fromNow(refresh=True) }}</strong></p>
+
+{#Jquery#}
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+{#Moments JS scripts#}
+{{ moment.include_moment() }}
+</body>
+</html>
